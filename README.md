@@ -83,3 +83,7 @@ The project roadmap includes the following planned enhancements:
 2.  **Authentication Framework**: Implementation of secure login protocols (JWT/OAuth) for multi-user support.
 3.  **Predictive Analysis**: AI-driven forecasting for budget optimization based on historical spending patterns.
 4.  **Internationalization**: Multi-currency support and localized formatting.
+
+## Author
+
+Aditya Khamait
