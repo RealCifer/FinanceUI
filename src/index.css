@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-[#FBFBFE] text-slate-900 transition-colors duration-700 antialiased selection:bg-violet-500/10 selection:text-violet-600;
+    font-family: 'Poppins', sans-serif;
+  }
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white dark:bg-white/[0.03] backdrop-blur-2xl border border-slate-100 dark:border-white/[0.08] shadow-[0_8px_30px_rgb(0,0,0,0.02)] dark:shadow-none transition-all duration-700;
+  }
+  .glass-card:hover {
+    @apply shadow-[0_20px_50px_rgba(124,58,237,0.08)] dark:shadow-[0_20px_50px_rgba(124,58,237,0.03)] -translate-y-1;
+  }
+  .text-premium-h1 {
+    @apply text-3xl md:text-5xl font-[800] tracking-[-0.03em] leading-tight text-slate-900 dark:text-white transition-colors duration-500;
+  }
+  .text-premium-label {
+    @apply text-[10px] font-extrabold uppercase tracking-[0.25em] text-slate-400 dark:text-slate-500;
+  }
+  .tab-pill {
+    @apply rounded-full px-6 py-2.5 transition-all duration-300 font-bold text-sm flex items-center justify-center;
+  }
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors;
+}
