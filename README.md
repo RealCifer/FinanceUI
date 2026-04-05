@@ -1,5 +1,7 @@
 # DashboardUI: Professional Financial Analytics Dashboard
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-6366f1?style=for-the-badge&logo=vercel)](https://finance-ui-jade.vercel.app/)
+
 DashboardUI is a high-performance, single-page application (SPA) engineered for granular financial tracking and data-driven wealth management. The platform provides a sophisticated interface for personal assets, offering a balance between comprehensive data visualization and streamlined transaction management.
 
 ## Project Overview
