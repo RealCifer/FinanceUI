@@ -21,8 +21,8 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
     `}>
       <div className="flex items-center justify-between p-8">
         <h1 className="text-2xl font-[800] tracking-tighter text-slate-900 dark:text-white flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center text-white text-base">F</div>
-          Finance<span className="text-violet-600">UI</span>
+          <div className="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center text-white text-base">D</div>
+          Dashboard<span className="text-violet-600">UI</span>
         </h1>
         <button 
           className="md:hidden text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" 

@@ -1,10 +1,10 @@
-# FinanceUI: Professional Financial Analytics Dashboard
+# DashboardUI: Professional Financial Analytics Dashboard
 
-FinanceUI is a high-performance, single-page application (SPA) engineered for granular financial tracking and data-driven wealth management. The platform provides a sophisticated interface for personal assets, offering a balance between comprehensive data visualization and streamlined transaction management.
+DashboardUI is a high-performance, single-page application (SPA) engineered for granular financial tracking and data-driven wealth management. The platform provides a sophisticated interface for personal assets, offering a balance between comprehensive data visualization and streamlined transaction management.
 
 ## Project Overview
 
-The objective of FinanceUI is to provide users with a secure and intuitive environment for monitoring their financial health. It facilitates:
+The objective of DashboardUI is to provide users with a secure and intuitive environment for monitoring their financial health. It facilitates:
 
 -   **Granular Auditing**: Precise recording and categorization of all financial activities.
 -   **Statistical Analysis**: Real-time visual aids and reporting tools for assessing spending habits.

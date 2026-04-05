@@ -61,7 +61,7 @@ const Dashboard = () => {
     <div className="max-w-7xl mx-auto p-6 md:p-10 fade-in animate-in duration-500">
 
       <SectionHeader 
-        title="Financial Overview" 
+        title="DashboardUI" 
         subtitle="Manage your assets, track daily spending, and visualize growth." 
       />
 
