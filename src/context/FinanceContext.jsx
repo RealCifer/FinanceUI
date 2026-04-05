@@ -19,20 +19,17 @@ export const FinanceProvider = ({ children }) => {
     type: 'all'
   });
 
-  // Dark Mode State
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('finance-theme');
     return saved ? saved : 'light';
   });
 
-  // Toggle Theme
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('finance-theme', newTheme);
   };
 
-  // Sync theme with HTML document
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -41,7 +38,6 @@ export const FinanceProvider = ({ children }) => {
     }
   }, [theme]);
 
-  // Mock Loading Delay for UX Improvement & LocalStorage Hydration
   useEffect(() => {
     const timer = setTimeout(() => {
       try {
@@ -62,14 +58,12 @@ export const FinanceProvider = ({ children }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Sync state changes to LocalStorage
   useEffect(() => {
     if (!isLoading) {
       localStorage.setItem('finance-ui-transactions', JSON.stringify(transactions));
     }
   }, [transactions, isLoading]);
 
-  // Derived state for filtered transactions
   const filteredTransactions = useMemo(() => {
     return transactions.filter(t => {
       const matchSearch = 
@@ -88,7 +82,7 @@ export const FinanceProvider = ({ children }) => {
     setTransactions(prev => [
       { 
         ...transaction, 
-        id: `gen_${Date.now()}` // Generate a simple unique ID
+        id: `gen_${Date.now()}`
       }, 
       ...prev
     ]);
@@ -120,7 +114,6 @@ export const FinanceProvider = ({ children }) => {
     localStorage.setItem('finance-ui-transactions', JSON.stringify(mockTransactions));
   };
 
-  // The context value
   const value = {
     transactions,
     filteredTransactions,

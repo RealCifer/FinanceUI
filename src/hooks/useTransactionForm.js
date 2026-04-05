@@ -1,17 +1,3 @@
-/**
- * useTransactionForm.js
- * Custom hook encapsulating form state, validation, and field-change logic
- * for the Add / Edit transaction form.
- *
- * Returns
- * ───────
- * formData          object
- * formErrors        object
- * handleFieldChange (field, value) => void
- * validate          () => errors object (empty = valid)
- * resetForm         (values?) => void   — resets to DEFAULT_FORM or supplied values
- * setFormErrors     state setter        — for clearing all errors externally
- */
 import { useState } from 'react';
 
 export const DEFAULT_FORM = {

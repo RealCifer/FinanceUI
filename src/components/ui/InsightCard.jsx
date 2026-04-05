@@ -1,14 +1,3 @@
-/**
- * InsightCard.jsx
- * An actionable insight card: coloured icon bubble + title + body text.
- *
- * Props
- * ─────
- * icon             ReactNode
- * iconColorScheme  'rose' | 'emerald' | 'indigo' | 'amber'  (default: 'indigo')
- * title            string
- * children         ReactNode  — body content
- */
 import React, { memo } from 'react';
 
 const SCHEMES = {

@@ -36,7 +36,7 @@ const Analytics = () => {
         subtitle="Identifying seasonal patterns, spending velocity, and category allocation." 
       />
 
-      {/* Metric cards */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <StatCard
           label="Top Category"
@@ -58,10 +58,10 @@ const Analytics = () => {
         />
       </div>
 
-      {/* Charts */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
 
-        {/* Income vs Expense — full width */}
+
         <div className="glass-card p-8 rounded-[2rem] col-span-1 lg:col-span-2">
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center mr-4 shadow-sm">
@@ -74,7 +74,7 @@ const Analytics = () => {
           <MonthlyBarChart data={monthlyComparisonData} height={350} />
         </div>
 
-        {/* Monthly Spending Trend */}
+
         <div className="glass-card p-8 rounded-[2rem]">
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 rounded-2xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mr-4 shadow-sm">
@@ -87,7 +87,7 @@ const Analytics = () => {
           <MonthlyLineChart data={monthlyComparisonData} height={300} />
         </div>
 
-        {/* Category Breakdown */}
+
         <div className="glass-card p-8 rounded-[2rem]">
           <div className="flex items-center mb-8">
             <div className="w-10 h-10 rounded-2xl bg-rose-50 dark:bg-rose-900/30 flex items-center justify-center mr-4 shadow-sm">

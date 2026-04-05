@@ -16,7 +16,7 @@ const fmt = (n) => `$${n.toLocaleString(undefined, { minimumFractionDigits: 2, m
 const Dashboard = () => {
   const { transactions, isLoading } = useFinanceContext();
 
-  // ── Aggregated data ───────────────────────────────────────────────────────
+
   const { totalIncome, totalExpense, netSavings } = useMemo(
     () => getIncomeExpenseSummary(transactions),
     [transactions]
@@ -27,10 +27,10 @@ const Dashboard = () => {
     [transactions]
   );
 
-  // Running balance data — group by day for a clean line
+
   const balanceData = useMemo(() => {
     const raw = getRunningBalance(transactions);
-    // Merge same-day entries: keep only the last balance per date
+
     const dayMap = {};
     raw.forEach(({ date, balance }) => {
       const label = new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -39,7 +39,7 @@ const Dashboard = () => {
     return Object.entries(dayMap).map(([date, balance]) => ({ date, balance }));
   }, [transactions]);
 
-  // Monthly expense trajectory for insights panel
+
   const monthlyExpenseData = useMemo(() => {
     const expenses = transactions.filter((t) => t.type === 'expense');
     const monthly  = {};
@@ -65,7 +65,7 @@ const Dashboard = () => {
         subtitle="Manage your assets, track daily spending, and visualize growth." 
       />
 
-      {/* KPI Cards */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <StatCard
           label="Net Worth"
@@ -87,7 +87,7 @@ const Dashboard = () => {
         />
       </div>
 
-      {/* Insights */}
+
       <div className="mb-12">
         <div className="flex items-center mb-6">
           <div className="w-10 h-10 rounded-2xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mr-3 shadow-sm">
@@ -142,7 +142,7 @@ const Dashboard = () => {
         )}
       </div>
 
-      {/* Charts */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
         <div className="glass-card p-8 rounded-[2rem]">

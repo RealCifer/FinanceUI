@@ -59,7 +59,6 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         </ul>
       </nav>
 
-      {/* Mobile Dark Mode Toggle */}
       <div className="p-8 md:hidden border-t border-slate-100 dark:border-white/5">
          <button 
            onClick={toggleTheme}

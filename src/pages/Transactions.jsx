@@ -1,8 +1,4 @@
-/**
- * Transactions.jsx
- * Page component for viewing and managing transactions.
- * Orchestrates filtering, sorting, and CRUD modals.
- */
+
 import React, { useState, useMemo, useCallback } from 'react';
 import { Search, ListFilter, Plus, Edit2, Trash2 } from 'lucide-react';
 import useFinanceContext from '../hooks/useFinanceContext';
@@ -15,28 +11,28 @@ import DeleteConfirmModal from '../components/transactions/DeleteConfirmModal';
 const Transactions = () => {
   const { transactions, deleteTransaction, addTransaction, updateTransaction, selectedRole } = useFinanceContext();
   
-  // Local state for UI
+
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingTx, setEditingTx] = useState(null);
   const [deletingTx, setDeletingTx] = useState(null);
   
-  // Filtering state
+
   const [filters, setFilters] = useState({
     search: '',
     category: 'all',
     type: 'all',
   });
 
-  // Sorting state
+
   const [sortConfig, setSortConfig] = useState({
     key: 'date',
     direction: 'desc',
   });
 
-  // Memoized form hook initialization
+
   const formHook = useTransactionForm(editingTx);
 
-  // Handlers wrapped in useCallback for referential stability
+
   const openAdd = useCallback(() => {
     setEditingTx(null);
     formHook.resetForm();
@@ -84,7 +80,7 @@ const Transactions = () => {
     }));
   }, []);
 
-  // Optimized data transformation pipeline
+
   const filteredTransactions = useMemo(() => {
     return transactions.filter((tx) => {
       const matchesSearch = 
@@ -134,7 +130,7 @@ const Transactions = () => {
         }
       />
 
-      {/* Filter bar */}
+
       <div className="glass-card rounded-[3rem] overflow-hidden mb-12 shadow-inner">
         <div className="p-8 md:p-10 border-b border-slate-100 dark:border-white/[0.05] bg-slate-50/20 dark:bg-white/[0.02] flex flex-col lg:flex-row gap-8">
           <div className="flex-1 relative group">

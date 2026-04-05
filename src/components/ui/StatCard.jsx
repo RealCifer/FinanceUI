@@ -1,15 +1,3 @@
-/**
- * StatCard.jsx
- * A KPI summary card: icon + label + value, with optional colour scheme.
- *
- * Props
- * ─────
- * label        string   — e.g. "Total Balance"
- * value        string   — pre-formatted string, e.g. "$4,214.50"
- * icon         ReactNode
- * colorScheme  'indigo' | 'emerald' | 'rose' | 'amber'  (default: 'indigo')
- * hoverBorder  boolean  — highlight border on hover (default: true)
- */
 import React, { memo } from 'react';
 
 const SCHEMES = {

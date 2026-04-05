@@ -1,17 +1,3 @@
-/**
- * TransactionTable.jsx
- * Presentational table rendering a list of transactions with sortable columns
- * and optional admin action buttons. Contains zero business logic.
- *
- * Props
- * ─────
- * transactions  Array   — already filtered + sorted by parent
- * isAdmin       boolean
- * sortConfig    { key: string, direction: 'asc'|'desc' }
- * onSort        (key: string) => void
- * onEdit        (tx: object) => void
- * onDelete      (tx: object) => void
- */
 import React, { memo } from 'react';
 import { Edit2, Trash2, ChevronUp, ChevronDown, ArrowUpDown, Search } from 'lucide-react';
 import EmptyState from '../ui/EmptyState';

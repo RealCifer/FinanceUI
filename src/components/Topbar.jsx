@@ -24,7 +24,7 @@ const Topbar = ({ toggleSidebar }) => {
       </div>
       <div className="flex items-center space-x-6 md:space-x-10">
         
-        {/* Dark Mode Toggle */}
+
         <button 
           onClick={toggleTheme}
           className="text-slate-500 hover:text-amber-500 dark:text-slate-400 dark:hover:text-amber-400 p-3 rounded-full border border-slate-100 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-white/5 transition-all hidden sm:flex items-center justify-center shadow-sm bg-white dark:bg-slate-900"
@@ -33,7 +33,7 @@ const Topbar = ({ toggleSidebar }) => {
           {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         </button>
 
-        {/* Role Switcher */}
+
         <div className="flex items-center bg-slate-50/80 dark:bg-white/5 rounded-full p-1.5 border border-slate-100 dark:border-white/5 shadow-inner">
           <div className="w-9 h-9 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm text-violet-600">
              <UserCircle className="w-5 h-5" />
